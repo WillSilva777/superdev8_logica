@@ -120,3 +120,21 @@ function exercicio021(){
         "A área total do quadrado é de: " + areaTotalQuadrado + "metros quadrados(em float)"
     )
 }
+
+function exercicio13() {
+    let indice = 1;
+    let somaIdades = 0;
+    
+    while (indice <= 6) {
+        let idade = parseInt(prompt("Digita a idade."));
+        somaIdades = somaIdades + idade;
+        indice ++;
+    }
+
+    let mediaIdades = somaIdades / 6;
+    if (mediaIdades >= 18) {
+        alert("Maior de idade com média de " + mediaIdades.toFixed(1));
+    } else {
+        alert("Menor de idade com média de " + mediaIdades.toFixed(1));
+    }
+}
