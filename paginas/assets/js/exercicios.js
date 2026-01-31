@@ -955,3 +955,149 @@ function exercicio27() {
 - Contar quantos números são iguais a zero
 - Contar quantos números são positivos
 - Apresentar a quantidade de números negativos, iguais a zero e positivos*/
+function exercicio28() {
+    let indice = 0;
+    let negativo = 0;
+    let zero = 0;
+    let positivo = 0;
+
+    while (indice < 8) {
+        let numero = parseInt(prompt(`Digite o ${indice + 1}º número:`));
+
+        if (numero < 0) {
+            negativo++;
+        } else if (numero == 0) {
+            zero++;
+        } else {
+            positivo++;
+        }
+        indice++;
+    }
+    alert(
+        "Números negativos: " + negativo +
+        "\nNúmero zero: " + zero +
+        "\nNúmeros positivos: " + positivo
+    )
+}
+
+/*29. Criar uma função exercicio29()
+- Solicitar o peso de 5 encomendas
+- Contar quantas são Leves (peso < 2 kg)
+- Contar quantas são Médias (peso entre 2 e 10 kg)
+- Contar quantas são Pesadas (peso > 10 kg)
+- Apresentar a quantidade de encomendas Leves, Médias e Pesadas*/
+function exercicio29() {
+    let indice = 0;
+    let leve = 0;
+    let medio = 0;
+    let pesado = 0;
+
+    while (indice < 5) {
+        let peso = parseFloat(prompt(`Digite o peso da ${indice + 1}º encomenda:`));
+
+        if (peso < 2) {
+            leve++;
+        } else if (peso < 10) {
+            medio++;
+        } else {
+            pesado++;
+        }
+        indice++;
+    }
+    alert(
+        "Encomenda leve: " + leve +
+        "\nEncomenda media: " + medio +
+        "\nEncomenda pesada: " + pesado
+    )
+}
+
+/*30. Criar uma função exercicio30()
+- Solicitar a quantidade de pelúcias da Disney que deseja cadastrar
+- Para cada pelúcia, solicitar o personagem [MICKEY/MINNIE/DONALD]
+- Contar quantas pelúcias são do Mickey
+- Contar quantas pelúcias são da Minnie
+- Contar quantas pelúcias são do Donald
+- Apresentar o resumo das pelúcias cadastradas por personagem*/
+function exercicio30() {
+    let indice = 0, mickey = 0, minnie = 0, donald = 0;
+    let qtdPelucias = parseInt(prompt("Digite quantas pelúcias cadastrar:"));
+
+    while (indice < qtdPelucias) {
+        let nome = prompt("Digite qual pelúcia cadastrar:MICKEY / MINNIE / DONALD").toUpperCase();
+
+        if (nome !== "MICKEY" && nome !== "MINNIE" && nome !== "DONALD") {
+            alert("Nome com erro ortografico!")
+            continue;
+        }
+
+        if (nome === "MICKEY") {
+            mickey = mickey + 1;
+        } else if (nome === "MINNIE") {
+            minnie = minnie + 1;
+        } else if (nome === "DONALD") {
+            donald = donald + 1;
+        }
+
+        indice = indice + 1;
+    }
+    alert(
+        "Número de Mickey: " + mickey +
+        "\nNúmero de Minnie: " + minnie +
+        "\nNúmero de Donald: " + donald
+    )
+}
+
+/*31. Criar uma função exercicio31()
+- Solicitar a quantidade de clientes que irão responder a pesquisa
+- Para cada cliente, solicitar a forma de pagamento utilizada [CRÉDITO/DÉBITO/DINHEIRO]
+- Contar quantos pagaram no crédito
+- Contar quantos pagaram no débito
+- Contar quantos pagaram em dinheiro
+- Apresentar o total de clientes em cada forma de pagamento*/
+function exercicio31() {
+    let indice = 0, credito = 0, debito = 0, dinheiro;
+    let quantidadeClientes = parseInt(prompt(`Quantos clientes responderão a pesquisa?`));
+
+    while (indice < quantidadeClientes) {
+        let formaPagamento = prompt(`Pesquisa de forma de pagamento,digite qual você usa [CRÉDITO/DÉBITO/DINHEIRO]`).toUpperCase;
+
+        if (formaPagamento === "CRÉDITO") {
+            credito = credito + 1;
+        }
+    }
+}
+
+/*50. Criar uma função exercicio50()
+- Cadastrar quantos títulos desejar em uma maratona geek
+- Para cada título solicitar:
+    - Nome do título
+    - Tipo [FILME/SÉRIE/ANIME]
+    - Nota (0 a 10)
+- Calcular a maior nota atribuída
+- Calcular a menor nota atribuída
+- Calcular a média das notas
+- Contar quantos são FILME, quantos são SÉRIE e quantos são ANIME
+- Apresentar um resumo geral da maratona*/
+function exercicio50() {
+    let i = 0, maiorNota = 0, menorNota = 0, mediaNotas = 0;
+    let series = parseInt(prompt("Quantos títulos cadastrar:"));
+
+
+    while (i < series) {
+        let nomeTitulo = prompt(`Digite o nome da ${i + 1}° título(s):`);
+        let tipo = prompt(`Digite o tipo:[FILME/SÉRIE/ANIME]`);
+        let nota = parseInt(`Digite a nota`);
+
+        if (nota > maiorNota) {
+            maiorNota = nota;
+        }
+
+        if (nota < menorNota) {
+            menorNota = nota;
+        }
+
+
+
+        i = i + 1;
+    }
+}
